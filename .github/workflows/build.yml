@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@main
       - name: Getting Sources
         run: |
-          cd $HOME
+          cd /home/runner
           mkdir llvm-toolchain && cd llvm-toolchain
           curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo && chmod a+rx >
           bin/repo init -u https://android.googlesource.com/platform/manifest -b llvm-toolchain
