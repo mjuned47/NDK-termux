@@ -12,6 +12,6 @@ jobs:
       - name: Getting Sources
         run: |
           cd /home/runner && mkdir llvm-toolchain && cd llvm-toolchain
-          curl https://storage.googleapis.com/git-repo-downloads/repo > repo && chmod a+rx > repo
+          curl https://storage.googleapis.com/git-repo-downloads/repo > repo && chmod a+rx repo
           ./repo init -u https://android.googlesource.com/platform/manifest -b llvm-toolchain
           ./repo sync -c -j6
