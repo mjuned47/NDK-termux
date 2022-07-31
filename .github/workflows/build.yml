@@ -1,7 +1,9 @@
 name: NDK Termux
+
 on:
   workflow_dispatch:
-  jobs:
+
+jobs:
   build:
     runs-on: ubuntu-latest
 
@@ -9,8 +11,7 @@ on:
       - uses: actions/checkout@main
       - name: Getting Sources
         run: |
-          cd /home/runner
-          mkdir llvm-toolchain && cd llvm-toolchain
+          cd /home/runner && mkdir llvm-toolchain && cd llvm-toolchain
           curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo && chmod a+rx >
           bin/repo init -u https://android.googlesource.com/platform/manifest -b llvm-toolchain
           bin/repo sync -c -j6
